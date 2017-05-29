@@ -1,0 +1,10 @@
+{
+  "runtime": {
+      "majorVersion": "8"
+  },
+  "command": "java -jar acc-cache-dcs.jar",
+  "release": {
+    "version": "1.0.0"
+  },
+  "isClustered" : true
+}

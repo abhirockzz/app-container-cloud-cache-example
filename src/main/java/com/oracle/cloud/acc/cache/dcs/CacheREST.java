@@ -73,17 +73,7 @@ public class CacheREST {
         String metrics_ = null;
         try {
             CacheMetrics metrics = CACHE.getMetrics();
-            long gets = metrics.getGetMetrics().getCount();
-            long size = metrics.getSize();
-            long hit = metrics.getHitCount();
-            long miss = metrics.getMissCount();
-
-            metrics_ = "GET: " + gets + " , "
-                    + "Size: " + size + " , "
-                    + "Hits: " + hit + " , "
-                    + "Misses: " + miss;
-
-            System.out.println("Metrics\n");
+            metrics_ = metrics.toString();
             System.out.println(metrics_);
         } catch (Exception e) {
             throw new RuntimeException(e);
